@@ -66,7 +66,7 @@ public class NameService {
      */
     public void addFemaleFirstName(String name) throws DuplicateNameException {
         if (femaleFirstNames.contains(name)) {
-            throw new DuplicateNameException("The name already exist in the females first name list");
+            throw new DuplicateNameException("The name '" + name + "' already exist in the females first name list");
         }
         femaleFirstNames.add(name);
         CSVReader_Writer.saveFemaleNames(femaleFirstNames);
@@ -81,7 +81,7 @@ public class NameService {
      */
     public void addMaleFirstName(String name) throws DuplicateNameException {
         if (maleFirstNames.contains(name)) {
-            throw new DuplicateNameException("The name already exists in the male first names list");
+            throw new DuplicateNameException("The name '" + name + "' already exists in the male first names list");
         }
         maleFirstNames.add(name);
         CSVReader_Writer.saveMaleNames(maleFirstNames);
@@ -96,7 +96,7 @@ public class NameService {
      */
     public void addLastName(String lastName) throws DuplicateNameException {
         if (lastNames.contains(lastName)) {
-            throw new DuplicateNameException("The last name already exists in the last names list");
+            throw new DuplicateNameException("The last name '" + lastName +  "' already exists in the last names list");
         }
         lastNames.add(lastName);
         CSVReader_Writer.saveLastNames(lastNames);
